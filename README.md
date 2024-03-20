@@ -18,3 +18,13 @@ This process gave me a lot of insight into the code design process, and I'm keen
 
 // All code in this project was written by me.
 // All together, there's a bit over 800 lines of code.
+
+** What this project actually is **
+- This is an 'unscramble' program, where a set of letters are given and the user gets a score based on how many different VALID words they can make.
+- While a default set of random letters are generated, the user can specify the letter set, dictionary, and minimum word length the program runs with.
+- Program Operation:
+- The program first parses the command line, and does EXTENSIVE error checks of the formatting of it, and then extracts option specifier values if the formatting is valid.
+- It then parses through a full english dictionary, picks out all real words that can be made from the letter set, and stores them in an array.
+- It then sorts the array in descending length, then alphabetical order.
+- The program then prompts for user input, error checks any words they enter, saves any valid words to an array, and constantly updates the user's score.
+- Upon quitting with a single 'q', the program then prints out all possible words that can be made from the letter set, as well as the maximum possible score.
