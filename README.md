@@ -28,3 +28,6 @@ This process gave me a lot of insight into the code design process, and I'm keen
 - It then sorts the array in descending length, then alphabetical order.
 - The program then prompts for user input, error checks any words they enter, saves any valid words to an array, and constantly updates the user's score.
 - Upon quitting with a single 'q', the program then prints out all possible words that can be made from the letter set, as well as the maximum possible score.
+
+![Screenshot 2024-03-20 at 11 37 52 pm](https://github.com/owenrharding/unscramble/assets/133105825/a22c5387-182f-45de-86e7-bb2186f5b0f3)
+![Screenshot 2024-03-20 at 11 39 33 pm](https://github.com/owenrharding/unscramble/assets/133105825/066fd7e7-1f9f-406a-8d22-a78396856649)
