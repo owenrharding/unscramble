@@ -1,8 +1,8 @@
 # unscramble
-Word game: how many words can you make from a given set of letters
+Guess as many words as possible that can be made from a given set of letters.
 
-This was a super fun project that I did for CSSE2310 - Computer Systems Principles and Programming.
-This was my first real exposure to pointers after briefy touching on them in CSSE2010 last semester, and this project threw my in the deep end.
+This was a fun project that I did for CSSE2310 - Computer Systems Principles and Programming.
+This was my first real exposure to pointers after briefy touching on them in CSSE2010 last semester, and this project threw me in the deep end.
 Luckily, after a bit of a learning curve, I'm now quite confident with them (I think), which I'm really glad about.
 
 My biggest takeaway from this project is how, by the end, I was regretting how I'd structured my code.
