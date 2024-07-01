@@ -1,0 +1,458 @@
+URL to view log online:
+https://source.eait.uq.edu.au/viewvc/csse2310-sem1-s4800761/trunk/a1/?view=log
+
+Retrieving logs at Wed Mar 20 22:29:35 AEST 2024
+------------------------------------------------------------------------
+r1 | uqpsutto | 2024-02-21 19:56:36 +1000 (Wed, 21 Feb 2024) | 1 line
+Changed paths:
+   A /play
+   A /prac
+   A /trunk
+   A /trunk/a1
+   A /trunk/a3
+   A /trunk/a4
+
+Initial repository structure
+
+
+------------------------------------------------------------------------
+r2 | s4800761 | 2024-03-03 10:47:54 +1000 (Sun, 03 Mar 2024) | 2 lines
+Changed paths:
+   A /trunk/a1/unscramble.c
+
+First revision, blank document, just testing out svn functionality.
+
+
+Index: unscramble.c
+ unscramble.c |    1 +
+ 1 file changed, 1 insertion(+)
+
+------------------------------------------------------------------------
+r5 | s4800761 | 2024-03-03 11:14:46 +1000 (Sun, 03 Mar 2024) | 2 lines
+Changed paths:
+   A /trunk/a1/Makefile
+
+First Makefile.
+
+
+Index: Makefile
+ Makefile |    6 ++++++
+ 1 file changed, 6 insertions(+)
+
+------------------------------------------------------------------------
+r6 | s4800761 | 2024-03-03 11:28:25 +1000 (Sun, 03 Mar 2024) | 2 lines
+Changed paths:
+   M /trunk/a1/Makefile
+   A /trunk/a1/uqunscramble.c
+
+Creating new uqunscramble.c file, didn't like the name of unscramble.c. Small Makefiletweaks- added variables.
+
+
+Index: Makefile
+ Makefile |    9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+Index: uqunscramble.c
+ uqunscramble.c |   13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+------------------------------------------------------------------------
+r7 | s4800761 | 2024-03-03 13:08:12 +1000 (Sun, 03 Mar 2024) | 2 lines
+Changed paths:
+   M /trunk/a1/uqunscramble.c
+
+Added basic (incomplete) line processing in main function.
+
+
+Index: uqunscramble.c
+ uqunscramble.c |   51 +++++++++++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 49 insertions(+), 2 deletions(-)
+
+------------------------------------------------------------------------
+r8 | s4800761 | 2024-03-03 16:02:49 +1000 (Sun, 03 Mar 2024) | 2 lines
+Changed paths:
+   M /trunk/a1/uqunscramble.c
+
+Finished rough copy of process_command_args(), not error checked yet!
+
+
+Index: uqunscramble.c
+ uqunscramble.c |   81 +++++++++++++++++++++++++++++++++++++++++++++++----------
+ 1 file changed, 67 insertions(+), 14 deletions(-)
+
+------------------------------------------------------------------------
+r9 | s4800761 | 2024-03-03 16:18:54 +1000 (Sun, 03 Mar 2024) | 2 lines
+Changed paths:
+   M /trunk/a1/uqunscramble.c
+
+Slightly revised, edited some basic errors but no promise of functionality yet.
+
+
+Index: uqunscramble.c
+ uqunscramble.c |   42 +++++++++++++++++++++++++++++++-----------
+ 1 file changed, 31 insertions(+), 11 deletions(-)
+
+------------------------------------------------------------------------
+r10 | s4800761 | 2024-03-04 13:18:31 +1000 (Mon, 04 Mar 2024) | 4 lines
+Changed paths:
+   M /trunk/a1/uqunscramble.c
+
+Error checked and fully compilable program.
+Bug fixed- dictName no longer has issues setting default filepath if no --dictionary arg is given.
+Current functionality: -can parse command line arguments and extract corresponding parameters. Usage format checks implemented. Default parameters are set if no respective arguments given.
+
+
+Index: uqunscramble.c
+ uqunscramble.c |   70 ++++++++++++++++++++++++++++++++++-----------------------
+ 1 file changed, 42 insertions(+), 28 deletions(-)
+
+------------------------------------------------------------------------
+r11 | s4800761 | 2024-03-05 07:08:48 +1000 (Tue, 05 Mar 2024) | 2 lines
+Changed paths:
+   M /trunk/a1/uqunscramble.c
+
+Bug fix- --length-min Segmentation fault, isdigit() took a string rather than a character. Should be full command line parsing functionality now.
+
+
+Index: uqunscramble.c
+ uqunscramble.c |   56 ++++++++++++++++++++++++++++++++++++--------------------
+ 1 file changed, 36 insertions(+), 20 deletions(-)
+
+------------------------------------------------------------------------
+r12 | s4800761 | 2024-03-05 07:45:28 +1000 (Tue, 05 Mar 2024) | 2 lines
+Changed paths:
+   M /trunk/a1/uqunscramble.c
+
+Added Letter Set Checking functionality. Added in function check_letter_set() and main(). Compilable working copy.
+
+
+Index: uqunscramble.c
+ uqunscramble.c |   87 ++++++++++++++++++++++++++++++++++++++++++++-------------
+ 1 file changed, 68 insertions(+), 19 deletions(-)
+
+------------------------------------------------------------------------
+r13 | s4800761 | 2024-03-05 14:54:20 +1000 (Tue, 05 Mar 2024) | 2 lines
+Changed paths:
+   M /trunk/a1/Makefile
+   M /trunk/a1/uqunscramble.c
+
+Added inclusion of csse2310a1 file and get_random_letters() function in Makefile and uqunscramble.c. 
+
+
+Index: Makefile
+ Makefile |    8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+Index: uqunscramble.c
+ uqunscramble.c |   49 ++++++++++++++++++++++++++++++-------------------
+ 1 file changed, 30 insertions(+), 19 deletions(-)
+
+------------------------------------------------------------------------
+r14 | s4800761 | 2024-03-05 22:56:42 +1000 (Tue, 05 Mar 2024) | 4 lines
+Changed paths:
+   M /trunk/a1/uqunscramble.c
+
+Big structural changes- changed from having multiple pointers to having a single struct pointer. Added multiple new functions. Split check_and_set_command_args() into multple subfunctions- e.g. check_command_args, set_command_args, check_arg_duplicates etc.
+Still has a lot of the old, unusued code- committing before deleting in case I delete something that I may need.
+Will do another revision soon after cleaning current code.
+
+
+Index: uqunscramble.c
+ uqunscramble.c |  394 +++++++++++++++++++++++++++++++++++++++++++--------------
+ 1 file changed, 298 insertions(+), 96 deletions(-)
+
+------------------------------------------------------------------------
+r15 | s4800761 | 2024-03-05 23:04:18 +1000 (Tue, 05 Mar 2024) | 3 lines
+Changed paths:
+   M /trunk/a1/uqunscramble.c
+
+Clean commit. See last commit for more details.
+Non-functional changes, removed unused functions, cleaned up commented-out code.
+
+
+Index: uqunscramble.c
+ uqunscramble.c |  149 ---------------------------------------------------------
+ 1 file changed, 2 insertions(+), 147 deletions(-)
+
+------------------------------------------------------------------------
+r16 | s4800761 | 2024-03-07 21:13:48 +1000 (Thu, 07 Mar 2024) | 2 lines
+Changed paths:
+   M /trunk/a1/uqunscramble.c
+
+Added check_and_set_dictionary() function, which checks whether the dictionary file name is valid and exits if not, otherwise it opens the dictionary as a FILE* and allocates it to the struct.
+
+
+Index: uqunscramble.c
+ uqunscramble.c |   37 ++++++++++++++++++++++++++++++++-----
+ 1 file changed, 32 insertions(+), 5 deletions(-)
+
+------------------------------------------------------------------------
+r17 | s4800761 | 2024-03-10 10:04:05 +1000 (Sun, 10 Mar 2024) | 3 lines
+Changed paths:
+   M /trunk/a1/uqunscramble.c
+
+Added parse_dictionary(), read_line(), is_word_anagrammatic_subset(), and num_letter_occurences() functions.
+Program can now parse the dictionary and extract words that can be made from the given set of letters, and save them to the struct's array of valid words. No known memory leaks.
+
+
+Index: uqunscramble.c
+ uqunscramble.c |  120 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 120 insertions(+)
+
+------------------------------------------------------------------------
+r18 | s4800761 | 2024-03-12 20:51:40 +1000 (Tue, 12 Mar 2024) | 3 lines
+Changed paths:
+   M /trunk/a1/uqunscramble.c
+
+Added basic stdin reading and processing. Functional in its ability to take arguments from stdin and determine whether they are a valid word, but not functional in terms of error messaging.
+Added functions process_guess() and run_game() to compilable functionality, yet messy.
+
+
+Index: uqunscramble.c
+ uqunscramble.c |  512 +++++++++++++++++++++++++++++++--------------------------
+ 1 file changed, 279 insertions(+), 233 deletions(-)
+
+------------------------------------------------------------------------
+r19 | s4800761 | 2024-03-16 18:02:23 +1000 (Sat, 16 Mar 2024) | 4 lines
+Changed paths:
+   M /trunk/a1/uqunscramble.c
+
+Added/finalised process_guess() function: added correct error statements (array saving is the same).
+Added exit_end_of_game() function for when EOF is detected from stdin.
+Currently passes all testa1.sh tests other than advanced functionality.
+
+
+Index: uqunscramble.c
+ uqunscramble.c |  156 +++++++++++++++++++++++++++++++++++----------------------
+ 1 file changed, 97 insertions(+), 59 deletions(-)
+
+------------------------------------------------------------------------
+r20 | s4800761 | 2024-03-16 22:08:27 +1000 (Sat, 16 Mar 2024) | 3 lines
+Changed paths:
+   M /trunk/a1/uqunscramble.c
+
+Added advanced functionality - added qsort functionality in parse_dictionary() function. Also added possible words and max score print.
+Converted read_line input to uppercase - that way don't have to take lowercase/uppercase input, create a new buffer/string to hold new toupper() iterations of current letters in current buffer; current functionality just automatically reads it in as uppercase.
+
+
+Index: uqunscramble.c
+ uqunscramble.c |   99 ++++++++++++++++++++++++++++++++++++++++++++-------------
+ 1 file changed, 77 insertions(+), 22 deletions(-)
+
+------------------------------------------------------------------------
+r21 | s4800761 | 2024-03-17 16:40:30 +1000 (Sun, 17 Mar 2024) | 2 lines
+Changed paths:
+   M /trunk/a1/Makefile
+
+Successfully updated Makefile to compile multiple files, namely uqunscramble.c and strings.c, under the single executable uqunscramble. This took forever, I hate Makefiles.
+
+
+Index: Makefile
+ Makefile |   21 +++++++++++++++------
+ 1 file changed, 15 insertions(+), 6 deletions(-)
+
+------------------------------------------------------------------------
+r22 | s4800761 | 2024-03-17 16:45:07 +1000 (Sun, 17 Mar 2024) | 2 lines
+Changed paths:
+   A /trunk/a1/strings.c
+   A /trunk/a1/strings.h
+   M /trunk/a1/uqunscramble.c
+
+Successfully taken three functions, namely read_line, is_word_anagrammatic_subset, and num_letter_occurences, and moved them from the original uqunscramble.c to a serperate strings.c and strings.h file to make the code more organised and compartmentalised.
+
+
+Index: strings.c
+ strings.c |   62 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 62 insertions(+)
+Index: strings.h
+ strings.h |   14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+Index: uqunscramble.c
+ uqunscramble.c |  252 +++++++++++++++++++++++++++++----------------------------
+ 1 file changed, 129 insertions(+), 123 deletions(-)
+
+------------------------------------------------------------------------
+r23 | s4800761 | 2024-03-17 17:29:14 +1000 (Sun, 17 Mar 2024) | 5 lines
+Changed paths:
+   M /trunk/a1/Makefile
+   A /trunk/a1/arrays.c
+   A /trunk/a1/arrays.h
+   M /trunk/a1/strings.c
+   M /trunk/a1/strings.h
+   M /trunk/a1/uqunscramble.c
+
+Added files arrays.c and arrays.h.
+Modified Makefile to include arrays.c and arrays.h.
+arrays.c and arrays.h were created to further compartmentalise main uqunscramble.c script. arrays.c and arrays.h move the functions word_in_array, add_word_to_array, sort_array_desc_alpha, and comparator from uqunscramble.c.
+Minor cleanliness updates to strings.c and strings.h.
+
+
+Index: Makefile
+ Makefile |    5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Index: arrays.c
+ arrays.c |   64 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 64 insertions(+)
+Index: arrays.h
+ arrays.h |   26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+Index: strings.c
+ strings.c |    6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Index: strings.h
+ strings.h |   10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+Index: uqunscramble.c
+ uqunscramble.c |  124 +--------------------------------------------------------
+ 1 file changed, 3 insertions(+), 121 deletions(-)
+
+------------------------------------------------------------------------
+r24 | s4800761 | 2024-03-17 17:55:56 +1000 (Sun, 17 Mar 2024) | 5 lines
+Changed paths:
+   M /trunk/a1/Makefile
+   A /trunk/a1/exit.c
+   A /trunk/a1/exit.h
+   M /trunk/a1/uqunscramble.c
+
+exit.c and exit.h were added to repository.
+exit.c and exit.h further compartmentalises uqunscramble.c functionality by taking all exit functions and moving them to exit.c/.h files.
+Modified Makefile to compile exit.o.
+Modified uqunscramble.c by taking away exit functions definitions and declarations.
+
+
+Index: Makefile
+ Makefile |    5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Index: exit.c
+ exit.c |   75 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 75 insertions(+)
+Index: exit.h
+ exit.h |   36 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 36 insertions(+)
+Index: uqunscramble.c
+ uqunscramble.c |  154 ++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 77 insertions(+), 77 deletions(-)
+
+------------------------------------------------------------------------
+r25 | s4800761 | 2024-03-19 21:39:33 +1000 (Tue, 19 Mar 2024) | 4 lines
+Changed paths:
+   M /trunk/a1/uqunscramble.c
+
+Fixed memory leak bugs.
+Created clean_game() function, which goes through and frees memory malloc-ed throughout the game.
+Also added missing frees in process_guess, which previously didn't free malloc-ed buffers from read_line function.
+
+
+Index: uqunscramble.c
+ uqunscramble.c |  377 ++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 188 insertions(+), 189 deletions(-)
+
+------------------------------------------------------------------------
+r26 | s4800761 | 2024-03-20 19:21:59 +1000 (Wed, 20 Mar 2024) | 3 lines
+Changed paths:
+   M /trunk/a1/Makefile
+   M /trunk/a1/arrays.c
+   M /trunk/a1/arrays.h
+   M /trunk/a1/exit.c
+   M /trunk/a1/exit.h
+   M /trunk/a1/strings.c
+   M /trunk/a1/strings.h
+   M /trunk/a1/uqunscramble.c
+
+No functionality changes, correcting formating as per 2310stylecheck.
+Only large change is introduction of valid_guess function in uqunscramble.c, which simply splits code off from process_guess to keep it under 50 line limit.
+
+
+Index: arrays.h
+ arrays.h |   10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+Index: exit.h
+ exit.h |    6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Index: Makefile
+ Makefile |   24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+Index: arrays.c
+ arrays.c |   26 ++++++++++++++------------
+ 1 file changed, 14 insertions(+), 12 deletions(-)
+Index: exit.c
+ exit.c |    7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+Index: strings.c
+ strings.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Index: strings.h
+ strings.h |    9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+Index: uqunscramble.c
+ uqunscramble.c |  138 ++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 70 insertions(+), 68 deletions(-)
+
+------------------------------------------------------------------------
+r27 | s4800761 | 2024-03-20 20:25:24 +1000 (Wed, 20 Mar 2024) | 2 lines
+Changed paths:
+   M /trunk/a1/arrays.c
+   M /trunk/a1/exit.c
+   M /trunk/a1/strings.c
+   M /trunk/a1/strings.h
+   M /trunk/a1/uqunscramble.c
+
+Some final checks, adding in final comments where I think I missed them before. Cleaning up.
+
+
+Index: exit.c
+ exit.c |    2 ++
+ 1 file changed, 2 insertions(+)
+Index: strings.h
+ strings.h |    2 ++
+ 1 file changed, 2 insertions(+)
+Index: arrays.c
+ arrays.c |   14 +++++++++-----
+ 1 file changed, 9 insertions(+), 5 deletions(-)
+Index: strings.c
+ strings.c |   11 +++++++++++
+ 1 file changed, 11 insertions(+)
+Index: uqunscramble.c
+ uqunscramble.c |   88 ++++++++++++++++++++++++++++++++++++++++++++-------------
+ 1 file changed, 68 insertions(+), 20 deletions(-)
+
+------------------------------------------------------------------------
+r28 | s4800761 | 2024-03-20 21:13:15 +1000 (Wed, 20 Mar 2024) | 2 lines
+Changed paths:
+   M /trunk/a1/arrays.c
+   M /trunk/a1/strings.c
+   M /trunk/a1/uqunscramble.c
+
+Added previously missing references. These are in strings.c (above read_line), and arrays.c (in comparator). Minor changes to uqunscramble.c.
+
+
+Index: arrays.c
+ arrays.c |    5 +++++
+ 1 file changed, 5 insertions(+)
+Index: strings.c
+ strings.c |    2 ++
+ 1 file changed, 2 insertions(+)
+Index: uqunscramble.c
+ uqunscramble.c |    4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+------------------------------------------------------------------------
+r29 | s4800761 | 2024-03-20 22:29:23 +1000 (Wed, 20 Mar 2024) | 3 lines
+Changed paths:
+   M /trunk/a1/Makefile
+   M /trunk/a1/strings.c
+   M /trunk/a1/uqunscramble.c
+
+Added -Wextra to Makefile.
+This meant I got extra errors, all about comparing ints and size_t-s. Easy fix with a little playing around with type casting.
+
+
+Index: Makefile
+ Makefile |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Index: strings.c
+ strings.c |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Index: uqunscramble.c
+ uqunscramble.c |    8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+------------------------------------------------------------------------
